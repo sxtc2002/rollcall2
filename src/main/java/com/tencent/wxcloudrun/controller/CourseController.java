@@ -6,12 +6,10 @@ import com.tencent.wxcloudrun.service.CourseService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 
-@Controller
+@RestController
 public class CourseController {
     final CourseService courseService;
 
@@ -24,7 +22,6 @@ public class CourseController {
 
     @PostMapping("/course/insert")
     ApiResponse insert(@RequestBody Course course) {
-        logger.info("/course/insert post request: {}, {}, {}", course.getCourse_Id(), course.getCourse_Name(), course.getTeacher_Id());
         courseService.insert(course.getCourse_Id(), course.getCourse_Name(), course.getTeacher_Id());
         return ApiResponse.ok(0);
     }

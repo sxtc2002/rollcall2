@@ -6,6 +6,6 @@ import java.io.Serializable;
 
 @Data
 public class Student implements Serializable {
-    private String Student_Id;
-    private String Student_Name;
+    private String student_Id;
+    private String student_Name;
 }

@@ -6,6 +6,6 @@ import java.io.Serializable;
 
 @Data
 public class Teacher implements Serializable {
-    private String Teacher_Id;
-    private String Teacher_Name;
+    private String teacher_Id;
+    private String teacher_Name;
 }
