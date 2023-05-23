@@ -4,9 +4,11 @@ import com.tencent.wxcloudrun.dao.StudentMapper;
 import com.tencent.wxcloudrun.model.Student;
 import com.tencent.wxcloudrun.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class StudentServiceImpl implements StudentService {
     final StudentMapper studentMapper;
 

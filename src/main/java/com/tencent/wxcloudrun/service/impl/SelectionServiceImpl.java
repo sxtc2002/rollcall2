@@ -4,9 +4,11 @@ import com.tencent.wxcloudrun.dao.SelectionMapper;
 import com.tencent.wxcloudrun.model.State;
 import com.tencent.wxcloudrun.service.SelectionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class SelectionServiceImpl implements SelectionService {
     final SelectionMapper selectionMapper;
 

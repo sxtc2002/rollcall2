@@ -3,8 +3,6 @@ package com.tencent.wxcloudrun.controller;
 import com.tencent.wxcloudrun.config.ApiResponse;
 import com.tencent.wxcloudrun.model.Course;
 import com.tencent.wxcloudrun.service.CourseService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,11 +11,8 @@ import org.springframework.web.bind.annotation.*;
 public class CourseController {
     final CourseService courseService;
 
-    final Logger logger;
-
     public CourseController(@Autowired CourseService courseService) {
         this.courseService = courseService;
-        this.logger = LoggerFactory.getLogger(CourseController.class);
     }
 
     @PostMapping("/course/insert")

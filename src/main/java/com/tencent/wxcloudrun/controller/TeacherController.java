@@ -3,6 +3,7 @@ package com.tencent.wxcloudrun.controller;
 import com.tencent.wxcloudrun.config.ApiResponse;
 import com.tencent.wxcloudrun.model.Teacher;
 import com.tencent.wxcloudrun.service.TeacherService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TeacherController {
     final TeacherService teacherService;
 
-    public TeacherController(TeacherService teacherService) {
+    public TeacherController(@Autowired TeacherService teacherService) {
         this.teacherService = teacherService;
     }
 

@@ -4,9 +4,11 @@ import com.tencent.wxcloudrun.dao.StateMapper;
 import com.tencent.wxcloudrun.model.State;
 import com.tencent.wxcloudrun.service.StateService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class StateServiceImpl implements StateService {
     final StateMapper stateMapper;
 
