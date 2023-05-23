@@ -15,7 +15,7 @@
         DELETE FROM Course WHERE `Course_Id` =#{Course_Id};
     </delete>
 
-    <select id="select" parameterType="com.tencent.wxcloudrun.model.Course">
+    <select id="select" resultMap="CourseMapper" parameterType="com.tencent.wxcloudrun.model.Course">
         SELECT * FROM Course;
     </select>
 </mapper>
