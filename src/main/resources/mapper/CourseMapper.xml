@@ -8,7 +8,7 @@
     </resultMap>
 
     <insert id="insert" parameterType="com.tencent.wxcloudrun.model.Course">
-        INSERT INTO Course (`Course_Id`, `Course_Name`, `Teacher_Id`) VALUES (#{Course_id}, #{Course_Name}, #{Teacher_Id});
+        INSERT INTO Course (`Course_Id`, `Course_Name`, `Teacher_Id`) VALUES (#{Course_Id}, #{Course_Name}, #{Teacher_Id});
     </insert>
 
     <delete id="delete" parameterType="com.tencent.wxcloudrun.model.Course">
