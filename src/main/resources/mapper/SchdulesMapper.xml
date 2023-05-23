@@ -2,19 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.tencent.wxcloudrun.dao.SchedulesMapper">
     <resultMap id="SchedulesMapper" type="com.tencent.wxcloudrun.model.Schedules">
-        <result property="Course_Id" column="Course_Id"/>
-        <result property="Course_Date" column="Course_Date"/>
+        <result property="course_Id" column="course_Id"/>
+        <result property="course_Date" column="course_Date"/>
     </resultMap>
 
     <insert id="insert" parameterType="com.tencent.wxcloudrun.model.Schedules">
-        INSERT INTO Schedules (`Course_Id`, `Course_Date`) VALUES (#{Course_id}, #{Course_Date});
+        INSERT INTO Schedules (`Course_Id`, `Course_Date`) VALUES (#{course_id}, #{course_Date});
     </insert>
 
     <delete id="delete" parameterType="com.tencent.wxcloudrun.model.Schedules">
-        DELETE FROM Schedules WHERE `Course_Id` =#{Course_Id} AND `Course_Data` = #{Course_Data};
+        DELETE FROM Schedules WHERE `Course_Id` =#{course_Id} AND `Course_Data` = #{course_Data};
     </delete>
 
     <select id="select" parameterType="com.tencent.wxcloudrun.model.Schedules">
-        SELECT * FROM Schedules WHERE `Course_Id` = #{Course_Id};
+        SELECT * FROM Schedules WHERE `Course_Id` = #{course_Id};
     </select>
 </mapper>

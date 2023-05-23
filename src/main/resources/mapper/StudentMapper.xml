@@ -2,16 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.tencent.wxcloudrun.dao.StudentMapper">
     <resultMap id="StudentMapper" type="com.tencent.wxcloudrun.model.Student">
-        <result property="Student_Id" column="Student_Id"/>
-        <result property="Student_Name" column="Student_Name"/>
+        <result property="student_Id" column="student_Id"/>
+        <result property="student_Name" column="student_Name"/>
     </resultMap>
 
     <insert id="insert" parameterType="com.tencent.wxcloudrun.model.Student">
-        INSERT INTO Student (`Student_Id`, `Student_Name`) VALUES (#{Student_Id}, #{Student_Name});
+        INSERT INTO Student (`Student_Id`, `Student_Name`) VALUES (#{student_Id}, #{student_Name});
     </insert>
 
     <delete id="delete" parameterType="com.tencent.wxcloudrun.model.Student">
-        DELETE FROM Student WHERE `Student_Id` =#{Student_Id};
+        DELETE FROM Student WHERE `Student_Id` =#{student_Id};
     </delete>
 
     <select id="select" parameterType="com.tencent.wxcloudrun.model.Student">
