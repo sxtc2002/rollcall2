@@ -24,7 +24,7 @@ public class CourseController {
 
     @PostMapping("/course/insert")
     ApiResponse insert(@RequestBody Course course) {
-        logger.info("{}, {}, {}", course.getCourse_Id(), course.getCourse_Name(), course.getTeacher_Id());
+        logger.info("/course/insert post request: {}, {}, {}", course.getCourse_Id(), course.getCourse_Name(), course.getTeacher_Id());
         courseService.insert(course.getCourse_Id(), course.getCourse_Name(), course.getTeacher_Id());
         return ApiResponse.ok(0);
     }
