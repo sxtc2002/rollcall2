@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 @Mapper
 public interface StudentMapper {
-    void insert(@Param("Student_Id") String Student_Id, @Param("Student_Name") String Student_Name);
-    void delete(@Param("Student_Id") String Student_Id);
+    void insert(@Param("student_Id") String student_Id, @Param("student_Name") String student_Name);
+    void delete(@Param("student_Id") String student_Id);
     ArrayList<Student> select();
 }

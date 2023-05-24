@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 @Mapper
 public interface SchedulesMapper {
-    void insert(@Param("Course_Id") String Course_Id, @Param("Course_Data") String Course_Data);
-    void delete(@Param("Course_Id") String Course_Id, @Param("Course_Data") String Course_Data);
-    ArrayList<Schedules> select(@Param("Course_Id") String Course_Id);
+    void insert(@Param("course_Id") String course_Id, @Param("course_Data") String course_Data);
+    void delete(@Param("course_Id") String course_Id, @Param("course_Data") String course_Data);
+    ArrayList<Schedules> select(@Param("course_Id") String course_Id);
 }
