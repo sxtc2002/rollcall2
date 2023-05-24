@@ -43,4 +43,9 @@ public class StateController {
     ApiResponse select_state(@RequestBody State state) {
         return ApiResponse.ok(stateService.select_state(state.getCourse_Id(), state.getCourse_Date(), state.getStudent_State()));
     }
+
+    @PostMapping("/state/select/bycourse")
+    ApiResponse select_all(@RequestBody State state) {
+        return ApiResponse.ok(stateService.select_all(state.getCourse_Id(), state.getCourse_Date()));
+    }
 }

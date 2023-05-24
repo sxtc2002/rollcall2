@@ -23,7 +23,7 @@
         SELECT * FROM State, Student WHERE `Student_Name` = #{student_Name} AND State.Student_Id = Student.Student_Id;
     </select>
 
-    <select id="select_state" resultMap="StateMapper" parameterType="com.tencent.wxcloudrun.model.State">
-        SELECT * FROM State, Student WHERE `Course_Id` = #{course_Id} AND `Course_Date` = #{course_Date} AND `Student_State` = #{student_State} AND State.Student_Id = Student.Student_Id;
+    <select id="select_all" resultMap="StateMapper" parameterType="com.tencent.wxcloudrun.model.State">
+        SELECT * FROM State, Student WHERE `Course_Id` = #{course_Id} AND `Course_Date` = #{course_Date} AND State.Student_Id = Student.Student_Id;
     </select>
 </mapper>

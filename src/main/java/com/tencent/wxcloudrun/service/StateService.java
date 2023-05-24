@@ -12,4 +12,5 @@ public interface StateService {
     void delete(String Student_Id, String Course_Id, String Course_Date);
     ArrayList<State> select_name(String Student_Name);
     ArrayList<State> select_state(String Course_Id, String Course_Date, String Student_State);
+    ArrayList<State> select_all(String Course_Id, String Course_Date);
 }

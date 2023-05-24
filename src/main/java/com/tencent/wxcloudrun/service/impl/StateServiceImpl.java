@@ -40,4 +40,9 @@ public class StateServiceImpl implements StateService {
     public ArrayList<State> select_state(String Course_Id, String Course_Date, String Student_State) {
         return stateMapper.select_state(Course_Id, Course_Date, Student_State);
     }
+
+    @Override
+    public ArrayList<State> select_all(String Course_Id, String Course_Date) {
+        return stateMapper.select_all(Course_Id, Course_Date);
+    }
 }
