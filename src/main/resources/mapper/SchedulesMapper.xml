@@ -11,7 +11,7 @@
     </insert>
 
     <delete id="delete" parameterType="com.tencent.wxcloudrun.model.Schedules">
-        DELETE FROM Schedules WHERE `Course_Id` =#{course_Id} AND `Course_Data` = #{course_Date};
+        DELETE FROM Schedules WHERE `Course_Id` =#{course_Id} AND `Course_Date` = #{course_Date};
     </delete>
 
     <select id="select" resultMap="SchedulesMapper" parameterType="com.tencent.wxcloudrun.model.Schedules">
