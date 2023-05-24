@@ -17,13 +17,13 @@ public class SchedulesServiceImpl implements SchedulesService {
     }
 
     @Override
-    public void insert(String Course_Id, String Course_Data) {
-        schedulesMapper.insert(Course_Id, Course_Data);
+    public void insert(String Course_Id, String Course_Date) {
+        schedulesMapper.insert(Course_Id, Course_Date);
     }
 
     @Override
-    public void delete(String Course_Id, String Course_Data) {
-        schedulesMapper.delete(Course_Id, Course_Data);
+    public void delete(String Course_Id, String Course_Date) {
+        schedulesMapper.delete(Course_Id, Course_Date);
     }
 
     @Override
