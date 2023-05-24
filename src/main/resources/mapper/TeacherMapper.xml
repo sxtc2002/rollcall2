@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.tencent.wxcloudrun.dao.TeacherMapper">
     <resultMap id="TeacherMapper" type="com.tencent.wxcloudrun.model.Teacher">
-        <result property="teacher_Id" column="teacher_Id"/>
-        <result property="teacher_Name" column="teacher_Name"/>
+        <result property="teacher_Id" column="Teacher_Id"/>
+        <result property="teacher_Name" column="Teacher_Name"/>
     </resultMap>
 
     <insert id="insert" parameterType="com.tencent.wxcloudrun.model.Teacher">
@@ -14,7 +14,7 @@
         DELETE FROM Teacher WHERE `Teacher_Id` =#{teacher_Id};
     </delete>
 
-    <select id="select" parameterType="com.tencent.wxcloudrun.model.Teacher">
+    <select id="select" resultMap="TeacherMapper" parameterType="com.tencent.wxcloudrun.model.Teacher">
         SELECT * FROM Teacher;
     </select>
 </mapper>

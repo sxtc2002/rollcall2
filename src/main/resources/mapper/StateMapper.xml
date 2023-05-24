@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.tencent.wxcloudrun.dao.StateMapper">
     <resultMap id="StateMapper" type="com.tencent.wxcloudrun.model.State">
-        <result property="course_Id" column="course_Id"/>
-        <result property="student_Id" column="student_Id"/>
-        <result property="student_Name" column="student_Name"/>
+        <result property="course_Id" column="Course_Id"/>
+        <result property="student_Id" column="Student_Id"/>
+        <result property="student_Name" column="Student_Name"/>
     </resultMap>
 
     <insert id="insert" parameterType="com.tencent.wxcloudrun.model.State">
@@ -19,11 +19,11 @@
         UPDATE State SET `Student_State` = #{student_State} WHERE `Student_Id` =#{student_Id} AND `Course_Id` = #{course_Id} AND `Course_Date` = #{course_Date};
     </update>
 
-    <select id="select_name" parameterType="com.tencent.wxcloudrun.model.State">
+    <select id="select_name" resultMap="StateMapper" parameterType="com.tencent.wxcloudrun.model.State">
         SELECT * FROM State, Student WHERE `Student_Name` = #{student_Name} AND State.Student_Id = Student.Student_Id;
     </select>
 
-    <select id="select_state" parameterType="com.tencent.wxcloudrun.model.State">
+    <select id="select_state" resultMap="StateMapper" parameterType="com.tencent.wxcloudrun.model.State">
         SELECT * FROM State, Student WHERE `Course_Id` = #{course_Id} AND `Course_Date` = #{course_Date} AND `Student_State` = #{student_State} AND State.Student_Id = Student.Student_Id;
     </select>
 </mapper>

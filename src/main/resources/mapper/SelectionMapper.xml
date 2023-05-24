@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.tencent.wxcloudrun.dao.SelectionMapper">
     <resultMap id="SelectionMapper" type="com.tencent.wxcloudrun.model.State">
-        <result property="course_Id" column="course_Id"/>
-        <result property="student_Id" column="student_Id"/>
-        <result property="student_Name" column="student_Name"/>
+        <result property="course_Id" column="Course_Id"/>
+        <result property="student_Id" column="Student_Id"/>
+        <result property="student_Name" column="Student_Name"/>
     </resultMap>
 
     <insert id="insert" parameterType="com.tencent.wxcloudrun.model.State">
@@ -15,7 +15,7 @@
         DELETE FROM Selection WHERE `Course_Id` =#{course_Id} AND `Student_Id` = #{student_Id};
     </delete>
 
-    <select id="select" parameterType="com.tencent.wxcloudrun.model.State">
+    <select id="select" resultMap="SelectionMapper" parameterType="com.tencent.wxcloudrun.model.State">
         SELECT * FROM Selection, Student WHERE `Course_Id` = #{course_Id} AND Selection.Student_Id = Student.Student_Id;
     </select>
 </mapper>
