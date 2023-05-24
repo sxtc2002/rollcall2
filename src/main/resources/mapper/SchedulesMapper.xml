@@ -7,7 +7,7 @@
     </resultMap>
 
     <insert id="insert" parameterType="com.tencent.wxcloudrun.model.Schedules">
-        INSERT INTO Schedules (`Course_Id`, `Course_Date`) VALUES (#{course_id}, #{course_Date});
+        INSERT INTO Schedules (`Course_Id`, `Course_Date`) VALUES (#{course_Id}, #{course_Date});
     </insert>
 
     <delete id="delete" parameterType="com.tencent.wxcloudrun.model.Schedules">
